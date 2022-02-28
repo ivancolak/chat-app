@@ -1,0 +1,23 @@
+.sidebar-container {
+    width: 500px;
+    height: 500px;
+    margin: 10px;
+  }
+  
+  a {
+    color:white;
+  }
+
+  .dashboard-card {
+    text-align: center;
+  }
+
+  .buttonAdd {
+     text-align: left;
+  }
+
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  

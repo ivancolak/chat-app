@@ -1,0 +1,26 @@
+<div>
+
+  <form [formGroup]="form">
+    <input type="file" #fileUpload id="fileUpload" name="fileUpload" accept="image/*" style="display:none;">
+  </form>
+
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div class="example-header-image"></div>
+      <mat-card-title>User Profile</mat-card-title>
+      <mat-card-subtitle>Email: {{user?.email}}</mat-card-subtitle>
+    </mat-card-header>
+    <ngx-avatar name="{{user?.username}}" src="{{profileImageUrl}}" size="300"></ngx-avatar>
+    <mat-card-content>
+      <p>
+
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button mat-raised-button color="warn" (click)="onClick()" matTooltip="Click to upload picture" style="width: 300px;">
+        <mat-icon>cloud_upload</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+
+</div>

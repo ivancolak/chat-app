@@ -1,0 +1,10 @@
+{
+  "type": "mysql",
+  "host": "sql7.freesqldatabase.com",
+  "port": 3306,
+  "username": "sql7381037",
+  "password": "stu6SMDeiy",
+  "database": "sql7381037",
+  "entities": ["dist/**/*.entity{.ts,.js}"],
+  "synchronize": false
+}

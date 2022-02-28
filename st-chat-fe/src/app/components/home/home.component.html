@@ -1,0 +1,15 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>
+            Select Workspace
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-selection-list #workspace [multiple]="false">
+            <mat-list-option *ngFor="let workspace of workspaces" [value]="workspace" (click)="goToWorkspace(workspace)">
+                <span> {{workspace?.name}}</span>
+            </mat-list-option>
+        </mat-selection-list>
+        <button class="create-btn" (click)="openDialog()" mat-raised-button>Create new workspace</button>
+    </mat-card-content>
+</mat-card>

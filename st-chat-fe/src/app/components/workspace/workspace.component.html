@@ -1,0 +1,26 @@
+<mat-toolbar>
+  <span>{{selectedWorkspace?.name}}</span>
+  <span class="example-spacer"></span>
+  <button mat-icon-button class="example-icon favorite-icon" matTooltip="Invite">
+    <mat-icon (click)="onInvite()">group_add</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon favorite-icon" matTooltip="Chat">
+    <mat-icon (click)="redirectToChat()">message</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon favorite-icon" matTooltip="Profile">
+    <mat-icon (click)="redirectToProfile()">person</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon favorite-icon" matTooltip="Password">
+    <mat-icon (click)="redirectToPassword()">lock</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon favorite-icon" matTooltip="Logout">
+    <mat-icon (click)="logout()">power_settings_new</mat-icon>
+  </button>
+
+</mat-toolbar>
+
+<mat-card>
+  <mat-card-content>
+    <router-outlet></router-outlet>
+  </mat-card-content>
+</mat-card>

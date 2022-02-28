@@ -1,0 +1,18 @@
+<form [formGroup]="createWs">
+	<div mat-dialog-content>
+		<p>Please enter the name</p>
+		<mat-form-field>
+			<mat-label>Workspace</mat-label>
+			<input matInput formControlName="name" required>
+			<mat-error>
+				Empty name is not allowed	
+			</mat-error>
+		</mat-form-field>
+	</div>
+	<div mat-dialog-actions>
+		<button mat-button (click)="onNoClick()">Cancel</button>
+		<button mat-button (click)="onCreateClick()">Create</button>
+	</div>
+</form>
+
+  

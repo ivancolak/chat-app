@@ -1,0 +1,28 @@
+<form [formGroup]="form">
+	<div mat-dialog-content>
+		<p>Please enter user</p>
+		<mat-form-field>
+			<mat-label>Email</mat-label>
+			<input type = "hidden" formControlName="workspaceId">
+			<input matInput formControlName="email" placeholder="enter email" required>
+			<mat-error>
+				Empty email is not allowed	
+            </mat-error>
+            
+        </mat-form-field>
+        
+		<mat-form-field>
+			<mat-label>Username</mat-label>
+            <input matInput formControlName="username" placeholder="enter username" required>
+			<mat-error>
+				Empty username is not allowed	
+			</mat-error>
+		</mat-form-field>
+	</div>
+	<div mat-dialog-actions>
+		<button mat-button (click)="onNoClick()">Cancel</button>
+		<button mat-button (click)="onCreateClick()">Create</button>
+	</div>
+</form>
+
+  

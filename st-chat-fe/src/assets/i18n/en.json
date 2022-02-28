@@ -1,0 +1,10 @@
+{
+    "LoginFormLabels": {
+        "username": "Username",
+        "password": "Password",
+        "submit": "Login",
+        "title": "Change language",
+        "mainTitle": "Log In",
+        "forgotPassword": "Forgot Password?"
+    }
+}

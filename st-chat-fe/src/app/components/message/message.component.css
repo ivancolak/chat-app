@@ -1,0 +1,15 @@
+.left-message{
+    text-align: left;
+} 
+
+.right-message{
+    text-align: right;
+} 
+
+.leftAvatar {
+    float: left;
+}
+
+.rightAvatar {
+    float: right;
+}

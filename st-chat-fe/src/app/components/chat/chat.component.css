@@ -1,0 +1,33 @@
+.example-container {
+  margin: 10px 80px;
+  border: 1px solid #555;
+  height: 500px;
+}
+
+.right-column {
+  
+  border-right: 1px solid rgb(110, 97, 97);
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  margin-bottom: 4px;
+}
+
+.left-column {
+  height: 600px;
+  overflow: auto; 
+  border: 1px solid grey; 
+}
+
+.mat-list-item.mat-list-single-selected-option {
+  background-color: #330f73;;
+  color: white;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.room {
+  background-color: lightgray;
+  margin-bottom: 5px;
+}

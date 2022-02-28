@@ -1,0 +1,9 @@
+<!-- <div *ngFor="let callId of remoteCalls" [id]="callId" class="remote">Remote</div> -->
+
+<!-- <div [id]="localCallId" class="local">Local</div> -->
+<div class="container">
+  <div class="row">
+    <div [id]="localCallId" class="col-sm-4" style="height: 250px;">1</div>
+    <div *ngFor="let callId of remoteCalls" [id]="callId" class="col-sm-4" style="height: 100px;">2</div>
+  </div>
+</div>

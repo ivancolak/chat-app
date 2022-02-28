@@ -1,0 +1,10 @@
+{
+    "LoginFormLabels": {
+        "username": "Korisničko ime",
+        "password": "Šifra",
+        "submit": "Logiraj se",
+        "title": "Promeni jezik",
+        "mainTitle": "Uloguj se",
+        "forgotPassword": "Zaboravljena sifra?"
+    }
+}

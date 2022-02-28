@@ -1,0 +1,60 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="container" style="text-align: center;">
+      <div class="row">
+        <div class="col-sm-3 left-column">
+          <mat-toolbar color="primary" style="margin-top: 10px;">
+            <span>Channels</span>
+            <span class="example-spacer"></span>
+            <button mat-icon-button (click)="openDialog()" matTooltip="Create a new room" matTooltipPosition="above"
+              style="cursor: pointer;">
+              <mat-icon>add</mat-icon>
+            </button>
+          </mat-toolbar>
+
+          <mat-selection-list #room [multiple]="false">
+            <mat-list-option *ngFor="let room of rooms" [value]="room" (click)="selectRoom(room)" class="room">
+              <div class="box">
+                <span>{{room.name}}</span>
+                <mat-icon  *ngIf="room.checkNotification" color="warn" >sms</mat-icon>
+              </div>
+            </mat-list-option>
+          </mat-selection-list>
+        </div>
+        <div class="col-sm-9" style="padding: 0px;">
+          <div class="right-column">
+            <div class="row" style="margin: 0px;">
+              <div class="col-sm-12" style="position: absolute;z-index: 1000;margin-top: 3px;">
+                <mat-card style="background-color: lightgrey;">
+                  <mat-icon *ngIf="selectedRoom" matTooltip="Start video call" (click)="startVideoCall()"
+                  style="float: right;color: green;cursor: pointer;">video_call</mat-icon>
+                  {{selectedRoom? selectedRoom.name + ' messages' : 'Please select room'}}
+                </mat-card>
+              </div>
+            </div>
+            <div class="row" style="margin: 0px;margin-top: 57px;height: 541px;overflow: auto;">
+              <div class="col-sm-12" *ngFor="let message of messages" style="padding: 0px;">
+                <app-message [message]="message"></app-message>
+              </div>
+            </div>
+          </div>
+          <form [formGroup]="messageForm" (ngSubmit)="sendMessage()">
+            <mat-form-field style="width: 80%;">
+              <input matInput placeholder="Please type a message.." formControlName="message" required>
+              <mat-error>
+                Please provide a message
+              </mat-error>
+            </mat-form-field>
+            <button mat-raised-button [disabled]="!selectedRoom" color="primary"
+              style="margin-left: 20px; width: 40px;">
+              <mat-icon>send</mat-icon>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
